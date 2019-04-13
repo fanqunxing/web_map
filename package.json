@@ -1,0 +1,30 @@
+{
+  "name": "web_map",
+  "version": "1.0.0",
+  "description": "一个持久化的map",
+  "main": "index.js",
+  "dependencies": {
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.4.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js",
+    "dev": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fwx426328/web_map.git"
+  },
+  "author": "fwx426328",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fwx426328/web_map/issues"
+  },
+  "homepage": "https://github.com/fwx426328/web_map#readme"
+}
