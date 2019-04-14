@@ -1,17 +1,22 @@
-class Shape {
-    area: number;
-    color: string;
-    constructor ( name: string, width: number, height: number ) {
-        this.area = width * height;
-        this.color = "pink";
-    };
+import map from './map';
+// let map: IMap = new Map();
 
-    shoutout() {
-        return "I'm " + this.color + " with an area of " + this.area + " cm squared.";
-    }
-}
-var square = new Shape("square", 30, 30);
-console.log(square);
-console.log( square.shoutout() );
-console.log( '1111Area of Shape:1 ' + square.area );
-console.log( '1111Color of Shape: ' + square.color );
+map.put('test', {
+  name: 'qwqw',
+  age: 23
+});
+
+map.put('test1', '{a: 12}');
+
+map.remove('test1').then(data => {
+  console.log(data);
+});
+
+map.get('test').then(data => {
+  console.log(data);
+});
+
+map.get('test1').then(data => {
+  console.log(data);
+});
+console.log(map);
