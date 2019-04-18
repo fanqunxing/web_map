@@ -105,6 +105,24 @@ export class LocalStorage implements Map {
     return result;
   };
 
+
+  public async keySet() {
+    const mapKeyList: string[] = this.getKeys();
+    return mapKeyList;
+  };
+
+
+  public foreach(fn: Function) {
+    const mapKeyList: string[] = this.getKeys();
+    for (let i = 0, len = mapKeyList.length; i < len; i++) {
+      const keys: string = this.getKey(mapKeyList[i]);
+      let result: string = this.storage.getItem(keys);
+      let data: Data = new Data(result, true);
+      result = data.getData();
+      fn.apply(this, [result, keys, i]);
+    }
+  };
+
 }
 
 

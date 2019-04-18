@@ -27,4 +27,12 @@ map.get('test').then(data => {
 map.get('test1').then(data => {
   console.log(data);
 });
+
+map.keySet().then(data => {
+  console.log(data);
+});
+
+map.foreach((item: any) => {
+  console.log(item);
+})
 console.log(map);

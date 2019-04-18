@@ -10,4 +10,8 @@ declare interface Map {
 
   remove(key: string): Promise<any>;
 
+  keySet(): Promise<any>;
+
+  foreach(fn: Function): void;
+
 };
