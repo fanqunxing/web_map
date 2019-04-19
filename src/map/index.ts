@@ -1,6 +1,5 @@
 import LocalStorage from './LocalStorage';
-// const localStorage: IMap = new LocalStorage();
+import SessionStorage from './SessionStorage';
 
-// const map: IMap = localStorage;
 
 export default LocalStorage;

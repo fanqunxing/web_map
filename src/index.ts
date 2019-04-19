@@ -1,17 +1,5 @@
 import Map from './map';
-import './lib/Set';
-import ArraySet from './lib/ArraySet';
 let map: Map = new Map('t_map');
-let set: Set<any> = new ArraySet([1,2,3,6,7]);
-
-set.add(1);
-set.add(1);
-set.add(2);
-set.add(0);
-
-console.log(set);
-console.log(set.size());
-console.log(set.toArray());
 
 map.put('test', {
   name: 'qwqw',
@@ -20,19 +8,25 @@ map.put('test', {
 
 map.put('test1', '{a: 12}');
 
-map.get('test').then(data => {
-  console.log(data);
-});
+map.get('test');
 
-map.get('test1').then(data => {
-  console.log(data);
-});
+map.get('test1');
 
-map.keySet().then(data => {
-  console.log(data);
-});
+map.keySet();
 
 map.foreach((item: any) => {
   console.log(item);
-})
+});
+
+let map1: Map = new Map('t_map_1');
+map1.put('1', '1');
+map1.put('2', '23');
+map1.foreach((item: any) => {
+  console.log(item);
+});
+
+let map2: Map = new Map();
+map2.put('12', '1');
+map2.put('22', '23');
+
 console.log(map);
